@@ -1,0 +1,187 @@
+/* style.css - PHIÊN BẢN NÂNG CẤP THEO THIẾT KẾ FIGMA */
+
+/* Import Font từ Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+/* --- Reset & Global Styles --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #121212; /* Nền dark-mode chính */
+    color: #e0e0e0; /* Màu chữ chính (trắng xám) */
+    overflow-x: hidden; /* Tránh scroll ngang */
+}
+
+a {
+    text-decoration: none;
+    color: #e0e0e0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* --- Cấu trúc Layout chung --- */
+.page-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- Sidebar Navigation --- */
+.sidebar-nav {
+    width: 280px;
+    background-color: #191919;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #2a2a2a;
+}
+
+.sidebar-nav .logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sidebar-nav ul {
+    list-style-type: none;
+    flex-grow: 1; /* Đẩy menu xuống dưới */
+}
+
+.sidebar-nav ul li a {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Khoảng cách giữa icon và chữ */
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar-nav ul li a .icon {
+    font-size: 20px;
+}
+
+.sidebar-nav ul li.active a,
+.sidebar-nav ul li a:hover {
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+.sidebar-nav .user-profile-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-top: 20px;
+    border-top: 1px solid #2a2a2a;
+}
+.sidebar-nav .user-profile-link .avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #555;
+    border-radius: 50%;
+    /* Thêm ảnh đại diện vào đây */
+}
+
+/* --- Main Content Area --- */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto; /* Cho phép cuộn khi nội dung dài */
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.search-bar {
+    width: 50%;
+}
+.search-bar input {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #2a2a2a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* --- Product Card (Dành cho trang chủ và trang sản phẩm) --- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    padding: 15px;
+    border: 1px solid #2a2a2a;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-card .img-placeholder {
+    width: 100%;
+    height: 180px;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    font-size: 40px;
+}
+
+.product-card .card-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.product-card .card-location {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.product-card .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-card .price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #4a90e2; /* Màu nhấn cho giá */
+}
+
+.product-card .btn-view {
+    padding: 8px 15px;
+    background-color: #4a90e2;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 14px;
+}

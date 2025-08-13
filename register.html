@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Real Estate</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="page-container">
+        <nav class="sidebar-nav">
+            <div class="logo">BDS Land</div>
+            <ul>
+                <li><a href="index.html"><span class="icon"><i class="fas fa-home"></i></span> Home</a></li>
+                <li><a href="apartments.html"><span class="icon"><i class="fas fa-building"></i></span> Products</a></li>
+                <li><a href="contact.html"><span class="icon"><i class="fas fa-envelope"></i></span> Contact</a></li>
+            </ul>
+            <div id="user-actions">
+                 </div>
+        </nav>
+
+        <main class="main-content" style="display: flex; align-items: center; justify-content: center;">
+            <div class="form-container" style="background-color: #1e1e1e; border: 1px solid #2a2a2a;">
+                <h1 style="text-align: center; margin-bottom: 30px;">Create Account</h1>
+                
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" placeholder="Choose a username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Create a strong password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" placeholder="Repeat your password" required>
+                    </div>
+                    <button type="submit" id="registerButton" class="form-btn" style="background-color: #4a90e2;">Sign Up</button>
+                </form>
+
+                <div class="form-text-center" style="margin-top: 30px;">
+                    <span style="color: #aaa;">Already have an account?</span> <a href="login.html" style="color: #4a90e2; font-weight: 700;">Login here</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+  <script src="index.js"></script> 
+<script src="register.js"></script> <script src="main.js"></script>
+</body>
+</html>
